@@ -1,0 +1,17 @@
+default_platform(:android)
+
+platform :android do
+  desc "Runs all the tests"
+  lane :firebase_distribution do
+    sh "flutter clean"
+  sh "flutter build apk --release"
+    firebase_app_distribution(
+      app:"1:894895230190:android:067d930ac1ec50153c77ff",
+      firebase_cli_token:"1//09gn08WXxYXz7CgYIARAAGAkSNwF-L9Irqs2B15K93HWWqM8_9LJJbP1dvafBTsWiNVi91jZnElH90v8i7eGcP8gYDsAAZxaPx4o",
+      android_artifact_path:"../build/app/outputs/flutter-apk/app-release.apk",
+      release_notes:"New version of app",
+      testers:"salialkoor@gmail.com",
+      upload_timeout: 600
+    )
+  end
+end
