@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "894895230190",
+    "project_id": "testfast-73578",
+    "storage_bucket": "testfast-73578.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:894895230190:android:067d930ac1ec50153c77ff",
+        "android_client_info": {
+          "package_name": "com.example.testfast"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkBLx5DD9hqSwFXahTUU-Rn5QtscB3Cb0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
