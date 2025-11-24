@@ -1,7 +1,9 @@
 name: Android Fastlane with Firebase App Distribution Workflow
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - master
 
 jobs:
   distribute_to_firebase:
@@ -28,8 +30,11 @@ jobs:
         bundler-cache: true
         working-directory: android
         
-    - name: Print message
-      run: echo "Hello from Flutter on GitHub Actions!"
-
+    - name: Build and Distribute App
+      env:
+        FIREBASE_CLI_TOKEN: ${{ secrets.FIREBASE_CLI_TOKEN }}
+      run: |
+        bundle exec fastlane android firebase_distribution
+      working-directory: android
 
 
